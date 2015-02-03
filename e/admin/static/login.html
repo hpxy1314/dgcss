@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../skin/style.css"/>
+
+	</head>
+	<body>
+		<div class="loginbg">
+			<div class="loginbar">
+				<div class="inputc"></div>
+				<div class="inputc"></div>
+				<div class="inputc"></div>
+				<div class="inputc"></div>
+			</div>
+		</div>
+	</body>
+	
+<script src="../skin/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	
+	$(function(){
+		
+		var viewHeight=$(document).height();
+		var loginbgHeight=$('.loginbg').height();
+		loginbgHeight<viewHeight?$('.loginbg').height(viewHeight):$('.loginbg').height(loginbgHeight);
+		
+	});
+	
+</script>
+	
+</html>

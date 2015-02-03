@@ -11,8 +11,8 @@ $ecms_config['db']['usedb']='mysql';	//数据库类型
 $ecms_config['db']['dbver']='5.0';	//数据库版本
 $ecms_config['db']['dbserver']='localhost';	//数据库登录地址
 $ecms_config['db']['dbport']='';	//端口，不填为按默认
-$ecms_config['db']['dbusername']='dgcss';	//数据库用户名
-$ecms_config['db']['dbpassword']='dgcss';	//数据库密码
+$ecms_config['db']['dbusername']='root';	//数据库用户名
+$ecms_config['db']['dbpassword']='';	//数据库密码
 $ecms_config['db']['dbname']='dgcss';	//数据库名
 $ecms_config['db']['setchar']='utf8';	//设置默认编码
 $ecms_config['db']['dbchar']='utf8';	//数据库默认编码
@@ -83,7 +83,7 @@ $ecms_config['memberf']['userkey']='userkey';//用户密钥字段
 
 //后台安全设置
 $ecms_config['esafe']['loginauth']='';	//登录认证码,如果设置登录需要输入此认证码才能通过
-$ecms_config['esafe']['ecookiernd']='Z97RdsICoNfsCM8g4p9Ve9AZ1GFqii';	//后台登录COOKIE认证码(填写10~50个任意字符，最好多种字符组合)
+$ecms_config['esafe']['ecookiernd']='ifSdmueumu5bTmxQiaWfNMqwboAnlQ';	//后台登录COOKIE认证码(填写10~50个任意字符，最好多种字符组合)
 $ecms_config['esafe']['ckhloginip']=0;	//后台是否验证登录IP,0为不验证,1为验证
 $ecms_config['esafe']['ckhsession']=0;	//后台是否启用SESSION验证,0为不验证,1为验证
 $ecms_config['esafe']['ckhanytime']=0;	//后台随时认证码变更周期,单位:秒(0为不启用)
@@ -95,10 +95,10 @@ $ecms_config['esafe']['ckhash']=0;	//启用后台来源认证码,0为金刚模�
 //COOKIE设置
 $ecms_config['cks']['ckdomain']='';		//cookie作用域
 $ecms_config['cks']['ckpath']='/';		//cookie作用路径
-$ecms_config['cks']['ckvarpre']='xenar';		//前台cookie变量前缀
-$ecms_config['cks']['ckadminvarpre']='wqwvs';		//后台cookie变量前缀
-$ecms_config['cks']['ckrnd']='q0ooBYl4Z5rNm6rvyYS6oyQcGhgocH';	//COOKIE验证随机码(填写10~50个任意字符，最好多种字符组合)
-$ecms_config['cks']['ckrndtwo']='sSfh6DH0kDuDOP2pr2ekEhn4m6xRjw';	//COOKIE验证随机码2(填写10~50个任意字符，最好多种字符组合)
+$ecms_config['cks']['ckvarpre']='wzlfe';		//前台cookie变量前缀
+$ecms_config['cks']['ckadminvarpre']='lrict';		//后台cookie变量前缀
+$ecms_config['cks']['ckrnd']='lOBmhHRq1z5NcaedAafXjeiK42EMLW';	//COOKIE验证随机码(填写10~50个任意字符，最好多种字符组合)
+$ecms_config['cks']['ckrndtwo']='qhMhnNsK5fHY3cPyKeImGUehjINzHo';	//COOKIE验证随机码2(填写10~50个任意字符，最好多种字符组合)
 
 //网站防火墙配置
 $ecms_config['fw']['eopen']=0;	//开启防火墙(0为关闭,1为开启)
@@ -128,7 +128,7 @@ $ecms_config['sets']['realplayertype']=',.rm,.ra,.rmvb,.mp4,.mov,.avi,.wav,.ram,
 
 //------------e_public
 $public_r=array('sitename'=>'帝国网站管理系统',
-'newsurl'=>'/dgcss/',
+'newsurl'=>'/dgcss//',
 'filetype'=>'|.gif|.jpg|.swf|.rar|.zip|.mp3|.wmv|.txt|.doc|',
 'filesize'=>2048,
 'relistnum'=>8,
@@ -151,14 +151,14 @@ $public_r=array('sitename'=>'帝国网站管理系统',
 'exittime'=>40,
 'smalltextlen'=>160,
 'defaultgroupid'=>1,
-'fileurl'=>'/dgcss/d/file/',
+'fileurl'=>'/dgcss//d/file/',
 'install'=>0,
 'phpmode'=>0,
 'dorepnum'=>300,
 'loadtempnum'=>50,
 'bakdbpath'=>'bdata',
 'bakdbzip'=>'zip',
-'downpass'=>'VZm3zWxueXdUsAmBtKVZ',
+'downpass'=>'0WE8iitb4Yu7ryfiBjLv',
 'filechmod'=>1,
 'loginkey_ok'=>0,
 'tbname'=>'news',
@@ -232,14 +232,14 @@ $public_r=array('sitename'=>'帝国网站管理系统',
 'ebakcanlistdb'=>0,
 'keytog'=>2,
 'keytime'=>30,
-'keyrnd'=>'oijB8etmg29Pv51iZQzUkxWFKHj9uI',
+'keyrnd'=>'oZrhj1v8Y6qLrsIRaLDYGHeYE558Hb',
 'checkdorepstr'=>',0,0,0,0,',
 'regkey_ok'=>0,
 'opengetdown'=>0,
 'gbkey_ok'=>0,
 'fbkey_ok'=>0,
 'newaddinfotime'=>0,
-'classnavs'=>'<a href=\"/dgcss/news/\">新闻中心</a>&nbsp;|&nbsp;<a href=\"/dgcss/download/\">下载中心</a>&nbsp;|&nbsp;<a href=\"/dgcss/movie/\">影视频道</a>&nbsp;|&nbsp;<a href=\"/dgcss/shop/\">网上商城</a>&nbsp;|&nbsp;<a href=\"/dgcss/flash/\">FLASH频道</a>&nbsp;|&nbsp;<a href=\"/dgcss/photo/\">图片频道</a>&nbsp;|&nbsp;<a href=\"/dgcss/article/\">文章中心</a>&nbsp;|&nbsp;<a href=\"/dgcss/info/\">分类信息</a>',
+'classnavs'=>'<a href=\"/dgcss//news/\">新闻中心</a>&nbsp;|&nbsp;<a href=\"/dgcss//download/\">下载中心</a>&nbsp;|&nbsp;<a href=\"/dgcss//movie/\">影视频道</a>&nbsp;|&nbsp;<a href=\"/dgcss//shop/\">网上商城</a>&nbsp;|&nbsp;<a href=\"/dgcss//flash/\">FLASH频道</a>&nbsp;|&nbsp;<a href=\"/dgcss//photo/\">图片频道</a>&nbsp;|&nbsp;<a href=\"/dgcss//article/\">文章中心</a>&nbsp;|&nbsp;<a href=\"/dgcss//info/\">分类信息</a>',
 'adminstyle'=>',1,2,',
 'docnewsnum'=>300,
 'openschall'=>0,
@@ -294,7 +294,7 @@ $public_r=array('sitename'=>'帝国网站管理系统',
 'filedatatbs'=>',1,',
 'filedeftb'=>1,
 'pldeftb'=>1,
-'plurl'=>'/dgcss/e/pl/',
+'plurl'=>'/dgcss//e/pl/',
 'plkey_ok'=>1,
 'plface'=>'||[~e.jy~]##1.gif||[~e.kq~]##2.gif||[~e.se~]##3.gif||[~e.sq~]##4.gif||[~e.lh~]##5.gif||[~e.ka~]##6.gif||[~e.hh~]##7.gif||[~e.ys~]##8.gif||[~e.ng~]##9.gif||[~e.ot~]##10.gif||',
 'plf'=>'',
