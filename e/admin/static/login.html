@@ -8,7 +8,48 @@
 	</head>
 	<body>
 		<div class="loginbg">
-			
+			<div class="loginbar">
+				<div class="inputc">
+					<span class="fl loicon"><img src="../skin/images/login_user.png"/></span>
+					<input class="fl input1" placeholder="请输入用户名"/>
+				</div>
+				<div class="inputc">
+					<span class="fl loicon"><img src="../skin/images/lopassword.png"/></span>
+					<input class="fl input1" placeholder="请输入密码" type="password"/>
+				</div>				
+				<div class="inputc">
+					<input  type="hidden" name="equestion"/>
+					<span class="fl loicon"><img src="../skin/images/loask.png"/></span>
+					<div class="fl select">
+						<span data="0">无安全提问</span>
+						<div class="drop">
+							<span data="0">无安全提问</span>
+							<span data="1">母亲的名字</span>
+							<span data="2">爷爷的名字</span>
+							<span data="3">父亲出生的城市</span>
+							<span data="4">您其中一位老师的名字</span>
+							<span data="5">您个人计算机的型号</span>
+							<span data="6">您最喜欢的餐馆名称</span>
+							<span data="7">驾驶执照的最后四位数字</span>
+						</div>
+					</div>
+				</div>		
+				
+				<div class="inputc answer">
+					<span class="fl loicon"><img src="../skin/images/answer.png"/></span>
+					<input class="fl input1" placeholder="请输入正确的答案"/>
+				</div>				
+				
+                <div class="yzm">
+                	<input name="key" class="fl yzmi" placeholder="请输入验证码"/>
+                	<img src="ShowKey.php" name="KeyImg" id="KeyImg" align="bottom" onclick="KeyImg.src='ShowKey.php?'+Math.random()" title="看不清楚,点击刷新">
+                </div>
+				
+				<div class="subm">
+				<input type="submit" class="submt" value="立即登陆"/>
+				</div>
+		
+			</div>
 		</div>
 	</body>
 	
@@ -17,9 +58,40 @@
 	
 	$(function(){
 		
-		var viewHeight=$(window).height();
+		var viewHeight=$(document).height();
 		var loginbgHeight=$('.loginbg').height();
 		loginbgHeight<viewHeight?$('.loginbg').height(viewHeight):$('.loginbg').height(loginbgHeight);
+		
+		var ask=$('.inputc .select');
+		ask.hover(
+			function(){
+			
+				$(this).find('.drop').stop(true,false).slideDown();
+			},
+			function(){
+				$(this).find('.drop').hide();				
+			}
+		);
+		var askv=$('.inputc .select .drop span');
+		askv.hover(function(){
+			$(this).css({color:'#ffffff',background:"#0099FF"});
+		},function(){
+			$(this).css({color:'#666666',background:"#ffffff"});
+		}
+		
+		).click(function(){
+			var v=parseInt($(this).attr('data'));
+			ask.find('span').eq(0).html($(this).html());
+			ask.find('span').eq(0).attr('data',v);
+			if(v&&v>0){
+				$('.answer').show();
+			}else{
+				$('.answer').hide();				
+			}
+			$('.inputc .select .drop').hide();
+		});
+		
+		
 		
 	});
 	

@@ -451,7 +451,7 @@ $thegid=GetDoTempGid();
 db_close();
 $empire=null;
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE >
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -459,6 +459,9 @@ $empire=null;
 <link href="adminstyle/<?=$loginadminstyleid?>/adminstyle.css" rel="stylesheet" type="text/css">
 <link id="luna-tab-style-sheet" type="text/css" rel="stylesheet" href="adminstyle/<?=$loginadminstyleid?>/tab.winclassic.css" disabled="disabled" /> 
 <!-- the id is not needed. It is used here to be able to change css file at runtime -->
+
+
+
 <style type="text/css"> 
    .dynamic-tab-pane-control .tab-page { 
           width:                100%;
@@ -486,7 +489,19 @@ $empire=null;
          background: transparent; 
  } 
   </style>
- <script type="text/javascript" src="../data/images/tabpane.js"></script> <script type="text/javascript"> 
+ <script type="text/javascript" src="../data/images/tabpane.js"></script> 
+ 
+  
+<?php
+$skinpath= $_SERVER['DOCUMENT_ROOT'].$public_r[newsurl].'e/admin/skin/skin.php';
+include($skinpath);
+?>
+
+ 
+ <script type="text/javascript"> 
+
+ 
+ 
   function setLinkSrc( sStyle ) { 
          document.getElementById( "luna-tab-style-sheet" ).disabled = sStyle != "luna"; 
   
@@ -511,8 +526,8 @@ function chgBg(obj,color){
   </script> 
 </head>
 
-<body>
-<table width="100%%" border="0" align="center" cellpadding="3" cellspacing="1">
+<body class="mainframe">
+<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
   <tr>
     <td>位置：<a href="SetEnews.php<?=$ecms_hashur['whehref']?>">参数设置</a></td>
   </tr>

@@ -335,7 +335,7 @@ $phpmyself=urlencode(eReturnSelfPage(1));
 //返回头条和推荐级别名称
 $ftnr=ReturnFirsttitleNameList($r['firsttitle'],$r['isgood']);
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE >
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -343,6 +343,8 @@ $ftnr=ReturnFirsttitleNameList($r['firsttitle'],$r['isgood']);
 <title><?=$word?></title>
 <link rel="stylesheet" href="adminstyle/<?=$loginadminstyleid?>/adminstyle.css" type="text/css">
 <link id="luna-tab-style-sheet" type="text/css" rel="stylesheet" href="adminstyle/<?=$loginadminstyleid?>/tab.winclassic.css" disabled="disabled" /> 
+
+
 <!-- the id is not needed. It is used here to be able to change css file at runtime -->
 <style type="text/css"> 
    .dynamic-tab-pane-control .tab-page { 
@@ -371,6 +373,12 @@ $ftnr=ReturnFirsttitleNameList($r['firsttitle'],$r['isgood']);
          background: transparent; 
  } 
   </style>
+  
+  <?php
+$skinpath= $_SERVER['DOCUMENT_ROOT'].$public_r[newsurl].'e/admin/skin/skin.php';
+include($skinpath);
+?>
+
  <script type="text/javascript" src="../data/images/tabpane.js"></script> <script type="text/javascript"> 
   function setLinkSrc( sStyle ) { 
          document.getElementById( "luna-tab-style-sheet" ).disabled = sStyle != "luna"; 

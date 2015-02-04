@@ -29,8 +29,7 @@ document.add.softfj.value=a.replace("/"+str,"");
   </tr>
   <tr>
     <td width='16%' height=25 bgcolor='ffffff'>关键字</td>
-    <td bgcolor='ffffff'>
-<input name="keyboard" type="text" size=42 value="<?=stripSlashes($r[keyboard])?>">
+    <td bgcolor='ffffff'><input name="keyboard" type="text" size=42 value="<?=stripSlashes($r[keyboard])?>">
 <font color="#666666">(多个请用&quot;,&quot;隔开)</font>
 </td>
   </tr>

@@ -13,11 +13,18 @@ $ftnr=ReturnFirsttitleNameList(0,0);
 $ftnamer=$ftnr['ftr'];
 $ignamer=$ftnr['igr'];
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE >
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="adminstyle/<?=$loginadminstyleid?>/adminstyle.css" type="text/css">
+
+<?php
+$skinpath= $_SERVER['DOCUMENT_ROOT'].$public_r[newsurl].'e/admin/skin/skin.php';
+include($skinpath);
+?>
+
+
 <title>管理信息</title>
 <script>
 function CheckAll(form)
@@ -74,7 +81,7 @@ function PushInfoToZt(form)
 }
 </script>
 </head>
-<body>
+<body class="mainframe">
 <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
   <tr> 
     <td width="52%">位置： 
@@ -93,7 +100,7 @@ function PushInfoToZt(form)
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr> 
             <td width="23%"> <div align="left" class="emenubutton"> 
-                <input type=button name=button value="增加信息" onClick="self.location.href='AddNews.php?enews=AddNews&ecmsnfrom=1<?=$addecmscheck?>&bclassid=<?=$bclassid?>&classid=<?=$classid?><?=$ecms_hashur['ehref']?>'">
+                <input class="addnews" type=button name=button value="增加信息" data="http://<?=$_SERVER['HTTP_HOST'].$public_r[newsurl]?>e/admin/AddNews.php?enews=AddNews&ecmsnfrom=1<?=$addecmscheck?>&bclassid=<?=$bclassid?>&classid=<?=$classid?><?=$ecms_hashur['ehref']?>">
               </div></td>
             <td width="77%" title="增加信息后使用本操作将信息显示到前台"> <div align="right"> 
                 <select name="dore">

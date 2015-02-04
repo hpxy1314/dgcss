@@ -64,9 +64,59 @@ body{background:#ffffff;}
 input,button,select,textarea{ outline:none;}
 textarea{ font-size:13px; resize:none;} 
 
+.fl{float: left;display: inline;}
+
+.fr{float: right;display: inline;}
+
+
+
+
+
+
 
 /*login*/
 .loginbg{width:100%; height: auto;background: url(../skin/images/login_bg.jpg) no-repeat top center; overflow: hidden;}
+.loginbg .loginbar{width:370px; height: auto; margin: 220px auto; }
+
+.inputc{width:100%; height: 40px;line-height: 40px;border-bottom: 1px solid #ffffff;margin: 5px auto 0;
+padding-bottom: 5px;
+}
+.inputc .loicon{margin-left:15px;}
+
+.input1{width:280px; height: 40px;line-height: 40px; font-size: 16px;margin-left: 10px;
+ color: #ffffff; font-family: "microsoft yahei";border:0 none; background: none; text-align: center;
+}
+
+.inputc .select{width:280px; height: 40px;line-height: 40px; font-size: 16px;margin-left: 10px;
+ color: #ffffff; font-family: "microsoft yahei";border:0 none; background: none; text-align: center;position: relative;
+}
+.inputc .select .drop{width:280px;position:absolute;top:40px;right:10px;height: auto;
+overflow: hidden;display: none;background: #ffffff;padding:8px 0;
+}
+.inputc .select .drop span{ display: block;width:100%; overflow: hidden;height: 30px; line-height: 30px;
+color: #666666;cursor: pointer;
+ }
+
+
+.answer{display: none;}
+
+
+.yzm{width:100%; height: 40px;line-height: 40px; font-size: 16px;
+ color: #ffffff; font-family: "microsoft yahei";border:0 none; background: none; text-align: center;line-height: 40px;
+ 
+}
+.yzmi{ width:220px; height:40px;border-bottom: 1px solid #ffffff;background: none;
+color: #ffffff;border:0 none;border-bottom:1px solid #ffffff;margin-top: 5px;padding-bottom: 5px;text-align: center;
+font-family: "microsoft yahei";
+}
+.yzmi img{ float: right;width:100px; height: 40px;margin-top:5px;}
+
+
+.subm{width:100%; height: 50px; overflow: hidden;margin-top:25px}
+.subm input{width:100%; height: 50px;background: #0099FF;color: #ffffff;border-radius: 10px;border:0 none;
+font-family: "microsoft yahei"; font-size: 18px;
+}
+
 
 
 

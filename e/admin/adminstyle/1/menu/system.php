@@ -4,20 +4,29 @@ if(!defined('InEmpireCMS'))
 	exit();
 }
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<!DOCTYPE >
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>菜单</title>
 <link href="../../../data/menu/menu.css" rel="stylesheet" type="text/css">
 <script src="../../../data/menu/menu.js" type="text/javascript"></script>
+
+<?php
+$skinpath= $_SERVER['DOCUMENT_ROOT'].$public_r[newsurl].'e/admin/skin/skin.php';
+include($skinpath);
+?>
+
+
+
 <SCRIPT lanuage="JScript">
 function tourl(url){
 	parent.main.location.href=url;
 }
 </SCRIPT>
 </head>
-<body onLoad="initialize()">
+<body onLoad="initialize()" class="leftmenus">
 <table border='0' cellspacing='0' cellpadding='0'>
 	<tr height=20>
 			<td id="home"><img src="../../../data/images/homepage.gif" border=0></td>
@@ -155,11 +164,11 @@ if($r[dof]||$r[dom]||$r[dotable])
   <tr id="itemtable" style="display:none"> 
     <td class="list">
 		<table border='0' cellspacing='0' cellpadding='0'>
-        <tr> 
+<!--        <tr> 
           <td class="file">
 			<a href="../../db/AddTable.php?enews=AddTable<?=$ecms_hashur['ehref']?>" target="main" onmouseout="this.style.fontWeight=''" onmouseover="this.style.fontWeight='bold'">新建数据表</a>
           </td>
-        </tr>
+        </tr>-->
 		<tr> 
           <td class="file1">
 			<a href="../../db/ListTable.php<?=$ecms_hashur['whehref']?>" target="main" onmouseout="this.style.fontWeight=''" onmouseover="this.style.fontWeight='bold'">管理数据表</a>

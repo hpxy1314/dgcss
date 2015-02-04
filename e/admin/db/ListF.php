@@ -26,12 +26,18 @@ if(!$tid||!$tbname)
 $url="数据表:[".$dbtbpre."ecms_".$tbname."]&nbsp;>&nbsp;<a href=ListF.php?tid=$tid&tbname=$tbname".$ecms_hashur['ehref'].">字段管理</a>";
 $sql=$empire->query("select * from {$dbtbpre}enewsf where tid='$tid' order by myorder,fid");
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE >
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>管理字段</title>
 <link href="../adminstyle/<?=$loginadminstyleid?>/adminstyle.css" rel="stylesheet" type="text/css">
+<?php
+$skinpath= $_SERVER['DOCUMENT_ROOT'].$public_r[newsurl].'e/admin/skin/skin.php';
+include($skinpath);
+?>
+
+
 </head>
 
 <body>
@@ -44,7 +50,7 @@ $sql=$empire->query("select * from {$dbtbpre}enewsf where tid='$tid' order by my
   <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
   <?=$ecms_hashur['form']?>
     <tr> 
-      <td class="emenubutton"><input type="button" name="Submit2" value="增加字段" onclick="self.location.href='AddF.php?enews=AddF&tid=<?=$tid?>&tbname=<?=$tbname?><?=$ecms_hashur['ehref']?>';"></td>
+      <td class="emenubutton"><input class="addf" type="button" name="Submit2" value="增加字段" onclick="self.location.href='AddF.php?enews=AddF&tid=<?=$tid?>&tbname=<?=$tbname?><?=$ecms_hashur['ehref']?>';"></td>
     </tr>
   </table>
   <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
@@ -74,13 +80,13 @@ $sql=$empire->query("select * from {$dbtbpre}enewsf where tid='$tid' order by my
   		{$iscj="否";}
   		if($r[isadd])
   		{
-  			$do="[<a href='AddF.php?tid=$tid&tbname=$tbname&enews=EditF&fid=".$r[fid].$ecms_hashur['ehref']."'>修改</a>]&nbsp;&nbsp;[<a href='../ecmsmod.php?tid=$tid&tbname=$tbname&enews=DelF&fid=".$r[fid].$ecms_hashur['href']."' onclick=\"return confirm('确认要删除？');\">删除</a>]";
+  			$do="[<a class='addf' href='AddF.php?tid=$tid&tbname=$tbname&enews=EditF&fid=".$r[fid].$ecms_hashur['ehref']."'>修改</a>]&nbsp;&nbsp;[<a href='../ecmsmod.php?tid=$tid&tbname=$tbname&enews=DelF&fid=".$r[fid].$ecms_hashur['href']."' onclick=\"return confirm('确认要删除？');\">删除</a>]";
  		 }
   		else
   		{
   			$ftype="系统字段";
   			$r[f]="<a title='系统字段'><font color=red>".$r[f]."</font></a>";
-  			$do="<a href='EditSysF.php?tid=$tid&tbname=$tbname&fid=".$r[fid].$ecms_hashur['ehref']."'><font color=red>[修改系统字段]</font></a>";
+  			$do="<a class='addf' href='EditSysF.php?tid=$tid&tbname=$tbname&fid=".$r[fid].$ecms_hashur['ehref']."'><font color=red>[修改系统字段]</font></a>";
   		}
   		if($r[tbdataf]==1)
   		{

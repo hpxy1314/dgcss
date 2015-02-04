@@ -20,22 +20,30 @@ $ecms_hashur=hReturnEcmsHashStrAll();
 $url="<a href='ListTable.php".$ecms_hashur['whehref']."'>管理数据表</a>";
 $sql=$empire->query("select tid,tname,tbname,isdefault from {$dbtbpre}enewstable order by tid");
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE >
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>管理数据表</title>
 <link href="../adminstyle/<?=$loginadminstyleid?>/adminstyle.css" rel="stylesheet" type="text/css">
+
+<?php
+$skinpath= $_SERVER['DOCUMENT_ROOT'].$public_r[newsurl].'e/admin/skin/skin.php';
+include($skinpath);
+?>
+
+
 </head>
 
-<body>
+
+<body class="mainframe">
 <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
   <tr> 
     <td width="50%">位置： 
       <?=$url?>
     </td>
     <td><div align="right" class="emenubutton">
-        <input type="button" name="Submit" value="增加数据表" onclick="self.location.href='AddTable.php?enews=AddTable<?=$ecms_hashur['ehref']?>';">&nbsp;&nbsp;
+        <input class="addtable" type="button" name="Submit" value="增加数据表" data="http://<?=$_SERVER['HTTP_HOST'].$public_r[newsurl]?>e/admin/db/AddTable.php?enews=AddTable<?=$ecms_hashur['ehref']?>">&nbsp;&nbsp;
 		<input type="button" name="Submit" value="导入系统模型" onclick="self.location.href='LoadInM.php<?=$ecms_hashur['whehref']?>';">
       </div></td>
   </tr>
@@ -71,7 +79,8 @@ $sql=$empire->query("select tid,tname,tbname,isdefault from {$dbtbpre}enewstable
     <td height="25"> 
       <?=$r[tname]?>
       &nbsp;( <?=$dbtbpre?>ecms_<b><?=$r[tbname]?></b> ) </td>
-    <td><div align="center">[<a href="#ecms" onclick="window.open('ListF.php?tid=<?=$r[tid]?>&tbname=<?=$r[tbname]?><?=$ecms_hashur['ehref']?>','','width=700,height=560,scrollbars=yes,top=70,left=100,resizable=yes');"><strong>管理字段</strong></a>] &nbsp;
+    <td><div align="center">[<a href="#ecms" class="listf"
+    data="http://<?=$_SERVER['HTTP_HOST'].$public_r[newsurl]?>e/admin/db/ListF.php?tid=<?=$r[tid]?>&tbname=<?=$r[tbname]?><?=$ecms_hashur['ehref']?>"><strong>管理字段</strong></a>] &nbsp;
         [<a href="#ecms" onclick="window.open('ListM.php?tid=<?=$r[tid]?>&tbname=<?=$r[tbname]?><?=$ecms_hashur['ehref']?>','','width=860,height=560,scrollbars=yes,top=70,left=100,resizable=yes');"><strong>管理系统模型</strong></a>] &nbsp;
         [<a href="#ecms" onclick="window.open('ListDataTable.php?tid=<?=$r[tid]?>&tbname=<?=$r[tbname]?><?=$ecms_hashur['ehref']?>','','width=700,height=560,scrollbars=yes,top=70,left=100,resizable=yes');"><strong>管理分表</strong></a>]</div></td>
     <td height="25"><div align="center"> [<a href="../ecmsmod.php?enews=DefaultTable&tid=<?=$r[tid]?><?=$ecms_hashur['href']?>" onclick="return confirm('确认要默认?');"><strong>设为默认表</strong></a>] &nbsp;

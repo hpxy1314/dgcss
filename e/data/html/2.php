@@ -45,8 +45,7 @@ document.add.softfj.value=a.replace("/"+str,"");
   </tr>
   <tr>
     <td width='16%' height=25 bgcolor='ffffff'>特殊属性</td>
-    <td bgcolor='ffffff'>
-<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#DBEAF5">
+    <td bgcolor='ffffff'><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#DBEAF5">
   <tr>
     <td height="25" bgcolor="#FFFFFF">信息属性: 
       <input name="checked" type="checkbox" value="1"<?=$r[checked]?' checked':''?>>

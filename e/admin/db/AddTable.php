@@ -41,15 +41,19 @@ while($yhr=$empire->fetch($yhsql))
 db_close();
 $empire=null;
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE >
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>新建数据表</title>
 <link href="../adminstyle/<?=$loginadminstyleid?>/adminstyle.css" rel="stylesheet" type="text/css">
+<?php
+$skinpath= $_SERVER['DOCUMENT_ROOT'].$public_r[newsurl].'e/admin/skin/skin.php';
+include($skinpath);
+?>
 </head>
 
-<body>
+<body class="mainframe">
 <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
   <tr> 
     <td>位置： 
@@ -95,8 +99,8 @@ $empire=null;
     </tr>
     <tr> 
       <td height="25" bgcolor="#F8F8F8">&nbsp;</td>
-      <td height="25" bgcolor="#FFFFFF"> <input type="submit" name="Submit" value="提交"> 
-        <input type="reset" name="Submit2" value="重置"> <input name="tid" type="hidden" id="tid" value="<?=$tid?>"> 
+      <td height="25" bgcolor="#FFFFFF">  <!--<input type="submit" name="Submit" value="提交"> 
+       <input type="reset" name="Submit2" value="重置"> <input name="tid" type="hidden" id="tid" value="<?=$tid?>"> -->
         <input name="enews" type="hidden" id="enews" value="<?=$enews?>"> <input name="oldtbname" type="hidden" id="oldtbname" value="<?=$r[tbname]?>"></td>
     </tr>
   </table>

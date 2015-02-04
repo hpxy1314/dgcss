@@ -20,7 +20,7 @@ $loginrnd=$lur['rnd'];
 $loginlevel=$lur['groupid'];
 $loginadminstyleid=$lur['adminstyleid'];
 hCheckEcmsRHash();
-require("../class/moddofun.php");
+require("../class/ajax_moddofun.php");
 //增加字段
 if($enews=="AddF")
 {

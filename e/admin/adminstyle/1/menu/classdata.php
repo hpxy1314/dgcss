@@ -11,13 +11,20 @@ if(!defined('InEmpireCMS'))
 <title>菜单</title>
 <link href="../../../data/menu/menu.css" rel="stylesheet" type="text/css">
 <script src="../../../data/menu/menu.js" type="text/javascript"></script>
+
+<?php
+$skinpath= $_SERVER['DOCUMENT_ROOT'].$public_r[newsurl].'e/admin/skin/skin.php';
+include($skinpath);
+?>
+
+
 <SCRIPT lanuage="JScript">
 function tourl(url){
 	parent.main.location.href=url;
 }
 </SCRIPT>
 </head>
-<body onLoad="initialize()">
+<body onLoad="initialize()" class="leftmenus">
 <table border='0' cellspacing='0' cellpadding='0'>
 	<tr height=20>
 			<td id="home"><img src="../../../data/images/homepage.gif" border=0></td>

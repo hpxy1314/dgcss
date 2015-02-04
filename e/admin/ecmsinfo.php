@@ -37,7 +37,7 @@ if($public_r['opennotcj'])
 }
 //会员
 require("../member/class/user.php");
-require("../class/hinfofun.php");
+require("../class/ajax_hinfofun.php");
 if($enews=="AddNews")//增加信息
 {
 	$navtheid=(int)$_POST['filepass'];

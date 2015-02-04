@@ -55,6 +55,12 @@ while($tbr=$empire->fetch($tbsql))
 <script src="../data/menu/menu.js" type="text/javascript"></script>
 <script language="javascript" src="../data/rightmenu/context_menu.js"></script>
 <script language="javascript" src="../data/rightmenu/ieemu.js"></script>
+
+<?php
+$skinpath= $_SERVER['DOCUMENT_ROOT'].$public_r[newsurl].'e/admin/skin/skin.php';
+include($skinpath);
+?>
+
 <SCRIPT lanuage="JScript">
 if(self==top)
 {self.location.href='admin.php<?=$ecms_hashur['whehref']?>';}
@@ -138,7 +144,7 @@ else
 }
 </SCRIPT>
 </head>
-<body onLoad="initialize();ContextMenu.intializeContextMenu();" bgcolor="#FFCFAD">
+<body onLoad="initialize();ContextMenu.intializeContextMenu();" bgcolor="#FFCFAD" class="leftmenus">
 	<table border='0' cellspacing='0' cellpadding='0'>
 	<tr height=20>
 			<td id="home"><img src="../data/images/homepage.gif" border=0></td>
@@ -148,6 +154,8 @@ else
 <?php
 echo $fclistenews;
 ?>
+
+
 </body>
 </html>
 <?php

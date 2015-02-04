@@ -1,6 +1,7 @@
 .dynamic-tab-pane-control.tab-pane {
 	position:	relative;
 	width:		100%;
+	overflow: hidden;
 }
 
 .dynamic-tab-pane-control .tab-row .tab {
@@ -51,7 +52,7 @@
 	top:			-2px;
 	color:			WindowText;
 	font:			9pt;
-	padding:		10px;
+	padding:		0px;
 }
 
 .dynamic-tab-pane-control .tab-row {

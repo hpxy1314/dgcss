@@ -6,8 +6,7 @@ if(!defined('InEmpireCMS'))
 ?><table width=100% align=center cellpadding=3 cellspacing=1 class=tableborder>
   <tr>
     <td width=16% height=25 bgcolor=ffffff>商品名称(*)</td>
-    <td bgcolor=ffffff>
-<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#DBEAF5">
+    <td bgcolor=ffffff><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#DBEAF5">
 <tr> 
   <td height="25" bgcolor="#FFFFFF">
 	<?=$tts?"<select name='ttid'><option value='0'>标题分类</option>$tts</select>":""?>
