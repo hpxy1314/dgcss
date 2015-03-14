@@ -90,15 +90,15 @@ elseif(getcvar('ecertkeyrnds'))
  
  
 <?php
-  if(empty($public_r['adminloginkey']))
-  {
+ /* if(empty($public_r['adminloginkey']))
+  {*/
 ?>		
                 <div class="yzm">
                 	<input name="key" class="fl yzmi" placeholder="请输入验证码"/>
                 	<img src="ShowKey.php" name="KeyImg" id="KeyImg" align="bottom" onclick="KeyImg.src='ShowKey.php?'+Math.random()" title="看不清楚,点击刷新">
                 </div>
 <?php
- }
+/* }*/
 ?>				
 				<div class="subm">
 				<input type="submit" class="submt" name="imageField" value="立即登陆"/>
